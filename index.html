@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Zhaohu Xing&#39;s home page">
 <link rel="stylesheet" href="jemdoc.css" type="text/css">
 <title>Xing Zhaohu&#39;s Homepage</title>
@@ -97,15 +98,12 @@ ga('send', 'pageview');
 <p>
 	<!-- <a href="https://ciallo.cc/">Ciallo!</a> -->
     <!-- <img src="./pic/steamhappy.png" alt="inser_img" width="25"> -->
- I'm a second-year PhD student from <a href="https://www.hkust-gz.edu.cn/">HKUST-GZ</a>, supervised by
-	<a href="https://sites.google.com/site/indexlzhu/home">Prof. Zhu Lei</a> and <a href="https://www.ieda.ust.hk/dfaculty/tsung/">Prof. Fugee Tsung </a>. Before that, I received the master degree from Tianjin University.
+ I'm Zhaohu Xing (邢兆虎), a third-year Ph.D. candidate at <a href="https://www.hkust-gz.edu.cn/">HKUST-GZ</a>, supervised by
+	<a href="https://sites.google.com/site/indexlzhu/home">Prof. Lei Zhu</a> and <a href="https://www.ieda.ust.hk/dfaculty/tsung/">Prof. Fugee Tsung</a>. Before that, I received my Master's degree from Tianjin University.
 	</p>
-	My research area is Medical Image Analysis.
-	</p> 
-
-  </p>
-  Serve as Reviewer for TMI, TPAMI, MedAI, JBHI, NeurIPS, ICLR, CVPR, ECCV, MICCAI.
-  </p> 
+	<p>My research focuses on <b>video generation</b>, <b>visual perception</b>, and <b>vision foundation models</b>. Recently, I'm particularly interested in RL-based post-training (e.g., GRPO) for multimodal models and agentic video synthesis.</p>
+	<p>I have built hands-on experience in (i) <b>video generation &amp; multimodal models</b> — agentic multi-shot video generation and human-centric video captioning via RL training; (ii) <b>visual perception</b> — large-scale mirror/reflection detection with iterative data engines; and (iii) <b>vision foundation models</b> — long-range sequential modeling with Mamba for generalizable visual representation (SegMamba).</p>
+	<p>My work has appeared at <b>CVPR</b> (2025; 2024 Spotlight), <b>NeurIPS</b> (2024), <b>ECCV</b> (2024), <b>MICCAI</b> (2024 Spotlight), <b>ACM MM</b> (2024 Oral; 2025), <b>IEEE TMM/TMI</b>, and more.</p>
 
 
 
@@ -170,26 +168,81 @@ ga('send', 'pageview');
       width: 100%;
       border-collapse: collapse;
     }
-    
+
     table td {
       padding: 10px;
       vertical-align: top;
     }
-    
-    /* .center {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 4px 4px 8px #888;
-    } */
 
-    
     a {
-      text-decoration: underline; 
+      text-decoration: underline;
     }
-    
-    .publication-title {
-      vertical-align: top;
+
+    .paper-title {
+      font-weight: 600;
+      font-size: 1.0em;
+      color: #1a1a1a;
+      line-height: 1.5;
+      margin-bottom: 4px;
+    }
+
+    .paper-authors {
+      font-size: 0.85em;
+      color: #444;
+      margin-bottom: 5px;
+    }
+
+    .paper-state {
+      font-size: 0.85em;
+    }
+
+    .paper-summary {
+      font-size: 0.85em;
+      color: #666;
+      font-style: italic;
+      margin-top: 5px;
+    }
+
+    /* Publications table */
+    #Publications {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #Publications tr:has(td[colspan]) {
+      display: none;
+    }
+
+    #Publications tr td {
+      padding: 20px 12px 20px 0;
+      vertical-align: middle;
+      border-bottom: 1px solid #ebebeb;
+    }
+
+    #Publications tr:last-of-type td {
+      border-bottom: none;
+    }
+
+    #Publications tr:hover td {
+      background-color: #f7f8ff;
+    }
+
+    #Publications td:first-child {
+      width: 190px;
+      min-width: 190px;
+      padding-right: 20px;
+    }
+
+    #Publications img {
+      width: 170px !important;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+      display: block;
+      transition: box-shadow 0.2s ease;
+    }
+
+    #Publications tr:hover img {
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
     }
   </style>
 </head>
@@ -198,19 +251,48 @@ ga('send', 'pageview');
     <tbody>
       <tr>
         
+
+        
+
+        <tr>
+          <td width="270">
+            <img src="./paper_pic/agentshot.png" width="300px" class="center">
+          </td>    
+          <td style="vertical-align: middle;">
+            <div class="paper-title"><b>AgentShot: Towards Agentic Multi-Shot Video Generation and Benchmarking</b></div>
+            <div class="paper-authors"><b>Zhaohu Xing</b>, Yingwei Song, Jiantong Zhao, Tian Ye, Yuan Gao, Kelly Peng, Lei Zhu, and Huanrui Yang</div>
+            <div class="paper-state">State: Submitted to ECCV 2026.</div>
+            <div class="paper-summary">Proposes an agentic framework for generating multi-shot videos with consistent characters and scenes.</div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
+          <tr>
+          <td width="270">
+            <img src="./paper_pic/HVCap.png" width="300px" class="center">
+          </td>    
+          <td style="vertical-align: middle;">
+            <div class="paper-title"><b>HVCap: Human-centric Video Captioning via Factorized GRPO and a New Benchmark</b></div>
+            <div class="paper-authors"><b>Zhaohu Xing</b>, Jiantong Zhao, Tian Ye, Yuan Gao, and Kelly Peng</div>
+            <div class="paper-state">State: Submitted to ICML 2026.</div>
+            <div class="paper-summary">Introduces factorized GRPO for human-centric video captioning with a new benchmark.</div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">&nbsp;</td>
+        </tr>
+
         <tr>
           <td width="270">
             <img src="./paper_pic/dam.jpg" width="300px" class="center">
           </td>    
           <td style="vertical-align: middle;">
-            <div class="publication-title">
-              Detect Any Mirrors: Boosting Learning Reliability on Large-Scale Unlabeled Data with an Iterative Data Engine<br>
-        <br>
-          <b>Zhaohu Xing</b>, Lihao Liu, Yijun Yang, Hongqiu Wang, Tian Ye, Sixiang Chen, Wenxue Li, Guang Liu, and Lei Zhu<br>
-            </div>
-            <br>
-            <b>State: Accepted by CVPR2025.</b>
-        <br>
+            <div class="paper-title"><b>Detect Any Mirrors: Boosting Learning Reliability on Large-Scale Unlabeled Data with an Iterative Data Engine</b></div>
+            <div class="paper-authors"><b>Zhaohu Xing</b>, Lihao Liu, Yijun Yang, Hongqiu Wang, Tian Ye, Sixiang Chen, Wenxue Li, Guang Liu, and Lei Zhu</div>
+            <div class="paper-state"><b>State: Accepted by CVPR2025.</b></div>
+            <div class="paper-summary">Scales mirror detection to large unlabeled data via an iterative self-training data engine.</div>
           </td>
         </tr>
         <tr>
@@ -224,14 +306,10 @@ ga('send', 'pageview');
             <img src="./paper_pic/ftm-net.jpg" width="300px" class="center">
           </td>    
           <td style="vertical-align: middle;">
-            <div class="publication-title">
-              Farther Than Mirror: Explore Pattern-Compensated Depth of Mirror with Temporal Changes for Video Mirror Detection<br>
-        <br>
-          <b>Zhaohu Xing</b>, Lihao Liu, Tian Ye, Sixiang Chen, Yijun Yang, Xiaojie Xu, Guang Liu, and Lei Zhu<br>
-            </div>
-            <br>
-            <b>State: Accepted by ACM MM2025</b>
-        <br>
+            <div class="paper-title"><b>Farther Than Mirror: Explore Pattern-Compensated Depth of Mirror with Temporal Changes for Video Mirror Detection</b></div>
+            <div class="paper-authors"><b>Zhaohu Xing</b>, Lihao Liu, Tian Ye, Sixiang Chen, Yijun Yang, Xiaojie Xu, Guang Liu, and Lei Zhu</div>
+            <div class="paper-state"><b>State: Accepted by ACM MM2025</b></div>
+            <div class="paper-summary">Exploits temporal depth changes to detect mirrors in videos beyond appearance cues.</div>
           </td>
         </tr>
         <tr>
@@ -243,14 +321,10 @@ ga('send', 'pageview');
             <img src="./paper_pic/segmamba.jpg" width="300px" class="center">
           </td>    
           <td style="vertical-align: middle;"> 
-            <div class="publication-title">
-              SegMamba: Long-range Sequential Modeling Mamba For 3D Medical Image Segmentation<br>
-        <br>
-              <b>Zhaohu Xing</b>, Tian Ye, Yijun Yang, Guang Liu and Lei Zhu<br>
-            </div>
-            <br>
-          <b>State: Early Accepted by MICCAI2024. (Spotlight Presentation)</b>
-        <br>
+            <div class="paper-title"><b>SegMamba: Long-range Sequential Modeling Mamba For 3D Medical Image Segmentation</b></div>
+            <div class="paper-authors"><b>Zhaohu Xing</b>, Tian Ye, Yijun Yang, Guang Liu and Lei Zhu</div>
+            <div class="paper-state"><b>State: Early Accepted by MICCAI2024. (Spotlight Presentation)</b></div>
+            <div class="paper-summary"> Applies Mamba's long-range sequential modeling to enhance vision encoder.</div>
           </td>
         </tr>
         <tr>
@@ -262,14 +336,10 @@ ga('send', 'pageview');
             <img src="./paper_pic/segmambav2.png" width="300px" class="center">
           </td>    
           <td style="vertical-align: middle;"> 
-            <div class="publication-title">
-              SegMamba-V2: Long-range Sequential Modeling Mamba For 3D Medical Image Segmentation<br>
-        <br>
-              <b>Zhaohu Xing</b>, Tian Ye, Yijun Yang, Guang Liu and Lei Zhu<br>
-            </div>
-            <br>
-          <b>State: Accepted by IEEE Transactions on Medical Imaging (TMI)</b>
-        <br>
+            <div class="paper-title"><b>SegMamba-V2: Long-range Sequential Modeling Mamba For 3D Medical Image Segmentation</b></div>
+            <div class="paper-authors"><b>Zhaohu Xing</b>, Tian Ye, Yijun Yang, Guang Liu and Lei Zhu</div>
+            <div class="paper-state"><b>State: Accepted by IEEE Transactions on Medical Imaging (TMI)</b></div>
+            <div class="paper-summary">Extends SegMamba with improved architecture for stronger 3D medical image segmentation.</div>
           </td>
         </tr>
         <tr>
@@ -282,14 +352,10 @@ ga('send', 'pageview');
             <img src="./paper_pic/cdm.jpg" width="300px"  class="center">
           </td>    
           <td style="vertical-align: middle;">
-            <div class="publication-title">
-              Cross-conditioned Diffusion Model for medical image-to-image translation<br>
-        <br>
-            <b>Zhaohu Xing</b>, Sicheng Yang, Sixiang Chen, Tian Ye, Jing Qin, and Lei Zhu<br>
-            </div>
-            <br>
-            <b>State: Accepted by MICCAI2024</b>
-        <br>
+            <div class="paper-title"><b>Cross-conditioned Diffusion Model for medical image-to-image translation</b></div>
+            <div class="paper-authors"><b>Zhaohu Xing</b>, Sicheng Yang, Sixiang Chen, Tian Ye, Jing Qin, and Lei Zhu</div>
+            <div class="paper-state"><b>State: Accepted by MICCAI2024</b></div>
+            <div class="paper-summary">Bridges unpaired medical image modalities via cross-conditioned diffusion generation.</div>
           </td>
         </tr>
         <tr>
@@ -301,15 +367,10 @@ ga('send', 'pageview');
             <img src="./paper_pic/diffunet.jpg" width="300px" class="center">
           </td>    
           <td style="vertical-align: middle;">
-            <div class="publication-title">
-              Diff-UNet: A Diffusion Embedded Network for Robust 3D Medical Image Segmentation<br>
-        <br>
-              <b>Zhaohu Xing</b>, Huazhu Fu, Guang Yang, and Lei Zhu<br>
-            </div>
-            <br>
-            <!-- State: Under review, <a href="paper_page/STAN/STAN.html" style="text-decoration: underline;">here is project page</a>. -->
-            <b>State: Accepted by Medical Image Analysis (MedIA).</b> 
-        <br>
+            <div class="paper-title"><b>Diff-UNet: A Diffusion Embedded Network for Robust 3D Medical Image Segmentation</b></div>
+            <div class="paper-authors"><b>Zhaohu Xing</b>, Huazhu Fu, Guang Yang, and Lei Zhu</div>
+            <div class="paper-state"><b>State: Accepted by Medical Image Analysis (MedIA).</b></div>
+            <div class="paper-summary">Embeds diffusion probabilistic models into U-Net for robust 3D medical segmentation.</div>
           </td>
         </tr>
         <tr>
@@ -321,15 +382,9 @@ ga('send', 'pageview');
             <img src="./paper_pic/hybridMIM.jpg" width="300px" class="center">
           </td>    
           <td style="vertical-align: middle;">
-            <div class="publication-title">
-              Hybrid Masked Image Modeling for 3D Medical Image Segmentation<br>
-        <br>
-              <b>Zhaohu Xing</b>, Liang Wan, Lequan Yu, and Lei Zhu<br>
-            </div>
-            <br>
-            <!-- State: Under review, <a href="paper_page/STAN/STAN.html" style="text-decoration: underline;">here is project page</a>. -->
-          <b>State: Accepted by IEEE Journal of Biomedical and Health Informatics (JBHI) 2024.</b>
-        <br>
+            <div class="paper-title"><b>Hybrid Masked Image Modeling for 3D Medical Image Segmentation</b></div>
+            <div class="paper-authors"><b>Zhaohu Xing</b>, Liang Wan, Lequan Yu, and Lei Zhu</div>
+            <div class="paper-state"><b>State: Accepted by IEEE Journal of Biomedical and Health Informatics (JBHI) 2024.</b></div>
           </td>
         </tr>
         <tr>
@@ -340,13 +395,10 @@ ga('send', 'pageview');
           <img src="./paper_pic/nestedformer.jpg" width="300px" class="center">
         </td>    
         <td style="vertical-align: middle;">
-          <div class="publication-title">
-            NestedFormer: Nested Modality-Aware Transformer for Brain Tumor Segmentation<br>
-			<br>
-            <b>Zhaohu Xing</b>, Lequan Yu, Liang Wan, and Lei Zhu<br>
-          </div>
-          <br>
-        <b>State: Accepted by MICCAI2022.</b>
+          <div class="paper-title"><b>NestedFormer: Nested Modality-Aware Transformer for Brain Tumor Segmentation</b></div>
+          <div class="paper-authors"><b>Zhaohu Xing</b>, Lequan Yu, Liang Wan, and Lei Zhu</div>
+          <div class="paper-state"><b>State: Accepted by MICCAI2022.</b></div>
+          <div class="paper-summary">Designs a nested modality-aware transformer for multi-modal brain tumor segmentation.</div>
         </td>
       </tr>
       <tr>
@@ -358,14 +410,10 @@ ga('send', 'pageview');
             <img src="./paper_pic/TPDM.jpg" width="300px" class="center">
           </td>    
           <td style="vertical-align: middle;">
-            <div class="publication-title">
-              Temporal Prompt Learning with Depth Memory for Video Mirror Detection<br>
-        <br>
-            <b>Zhaohu Xing</b>, Tian Ye, Sixiang Chen, and Lei Zhu<br>
-            </div>
-            <br>
-            <b>State: Accepted by IEEE TMM.</b>
-        <br>
+            <div class="paper-title"><b>Temporal Prompt Learning with Depth Memory for Video Mirror Detection</b></div>
+            <div class="paper-authors"><b>Zhaohu Xing</b>, Tian Ye, Sixiang Chen, and Lei Zhu</div>
+            <div class="paper-state"><b>State: Accepted by IEEE TMM.</b></div>
+            <div class="paper-summary">Leverages depth memory and temporal prompts for accurate video mirror detection.</div>
           </td>
         </tr>
         <tr>
@@ -378,14 +426,10 @@ ga('send', 'pageview');
             <img src="./paper_pic/mm_best.jpg" width="300px" class="center">
           </td>    
           <td style="vertical-align: middle;">
-            <div class="publication-title">
-              Non-Invasive to Invasive: Enhancing FFA Synthesis from CFP with a Benchmark Dataset and a Novel Network<br>
-        <br>
-            Hongqiu Wang, <b>Zhaohu Xing*</b>, Weitong Wu, Yijun Yang, Qingqing Tang, Yanwu Xu, and Lei Zhu<br>
-            </div>
-            <br>
-            <b>State: Accepted by ACM MM Workshop (2024).</b>
-        <br>
+            <div class="paper-title"><b>Non-Invasive to Invasive: Enhancing FFA Synthesis from CFP with a Benchmark Dataset and a Novel Network</b></div>
+            <div class="paper-authors">Hongqiu Wang, <b>Zhaohu Xing*</b>, Weitong Wu, Yijun Yang, Qingqing Tang, Yanwu Xu, and Lei Zhu</div>
+            <div class="paper-state"><b>State: Accepted by ACM MM Workshop (2024).</b></div>
+            <div class="paper-summary">Synthesizes invasive FFA images from non-invasive CFP with a new paired benchmark.</div>
           </td>
         </tr>
         <tr>
@@ -399,14 +443,10 @@ ga('send', 'pageview');
             <img src="./paper_pic/jialu_jbhi.jpg" width="300px" class="center">
           </td>    
           <td style="vertical-align: middle;">
-            <div class="publication-title">
-              Cascaded Inner-Outer Clip Retformer for Ultrasound Video Object Segmentation<br>
-        <br>
-            Jialu Li, Lei Zhu, <b>Zhaohu Xing</b>, Baoliang Zhao, Ying Hu, Faqin Lv, Qiong Wang<br>
-            </div>
-            <br>
-            <b>State: Accepted by IEEE Journal of Biomedical and Health Informatics (JBHI) 2024.</b>
-        <br>
+            <div class="paper-title"><b>Cascaded Inner-Outer Clip Retformer for Ultrasound Video Object Segmentation</b></div>
+            <div class="paper-authors">Jialu Li, Lei Zhu, <b>Zhaohu Xing</b>, Baoliang Zhao, Ying Hu, Faqin Lv, Qiong Wang</div>
+            <div class="paper-state"><b>State: Accepted by IEEE Journal of Biomedical and Health Informatics (JBHI) 2024.</b></div>
+            <div class="paper-summary">Segments ultrasound video objects via cascaded inner-outer clip transformers.</div>
           </td>
         </tr>
         <tr>
@@ -417,16 +457,12 @@ ga('send', 'pageview');
         <tr>
           <td width="270">
             <img src="./paper_pic/prompt_haze.jpg" width="300px" class="center">
-          </td>    
+          </td>
           <td style="vertical-align: middle;">
-            <div class="publication-title">
-              PromptHaze: Prompting Real-world Dehazing via Depth Anything Model<br>
-        <br>
-        Tian Ye, Sixiang Chen, Haoyu Chen, Wenhao Chai, Jingjing Ren, <b>Zhaohu Xing</b>, Wenxue Li, and Lei Zhu <br>
-            </div>
-            <br>
-            <b>State: Accepted by AAAI24</b>
-        <br>
+            <div class="paper-title"><b>PromptHaze: Prompting Real-world Dehazing via Depth Anything Model</b></div>
+            <div class="paper-authors">Tian Ye, Sixiang Chen, Haoyu Chen, Wenhao Chai, Jingjing Ren, <b>Zhaohu Xing</b>, Wenxue Li, and Lei Zhu</div>
+            <div class="paper-state"><b>State: Accepted by AAAI24</b></div>
+            <div class="paper-summary">Prompts depth estimation models to provide structural priors for real-world dehazing.</div>
           </td>
         </tr>
         <tr>
@@ -440,34 +476,26 @@ ga('send', 'pageview');
             <img src="./paper_pic/AGLNet.jpg" width="300px" class="center">
           </td>    
           <td style="vertical-align: middle;">
-            <div class="publication-title">
-              AGLLDiff: Guiding Diffusion Models Towards Unsupervised Training-free Real-world Low-light Image Enhancement<br>
-        <br>
-        Yunlong Lin, Tian Ye, Sixiang Chen, Zhenqi Fu, Yingying Wang, Wenhao Chai, <b>Zhaohu Xing</b>, Lei Zhu, and Xinghao Ding <br>
-            </div>
-            <br>
-            <b>State: Accepted by AAAI24</b>
-        <br>
+            <div class="paper-title"><b>AGLLDiff: Guiding Diffusion Models Towards Unsupervised Training-free Real-world Low-light Image Enhancement</b></div>
+            <div class="paper-authors">Yunlong Lin, Tian Ye, Sixiang Chen, Zhenqi Fu, Yingying Wang, Wenhao Chai, <b>Zhaohu Xing</b>, Lei Zhu, and Xinghao Ding</div>
+            <div class="paper-state"><b>State: Accepted by AAAI24</b></div>
+            <div class="paper-summary">Guides diffusion models with illumination priors for unsupervised low-light enhancement.</div>
           </td>
         </tr>
         <tr>
           <td colspan="2">&nbsp;</td>
         </tr>
 
-        
+
         <tr>
           <td width="270">
             <img src="./paper_pic/Teaching_Tailored_to_Talent.jpg" width="300px" class="center">
           </td>    
           <td style="vertical-align: middle;">
-            <div class="publication-title">
-              Teaching Tailored to Talent: Adverse Weather Restoration via Prompt Pool and Depth-Anything Constraint<br>
-        <br>
-            Sixiang Chen, Tian Ye, Kai Zhang, <b>Zhaohu Xing</b>, Yunlong Lin, and Lei Zhu <br>
-            </div>
-            <br>
-            <b>State: Accepted by ECCV2024</b>
-        <br>
+            <div class="paper-title"><b>Teaching Tailored to Talent: Adverse Weather Restoration via Prompt Pool and Depth-Anything Constraint</b></div>
+            <div class="paper-authors">Sixiang Chen, Tian Ye, Kai Zhang, <b>Zhaohu Xing</b>, Yunlong Lin, and Lei Zhu</div>
+            <div class="paper-state"><b>State: Accepted by ECCV2024</b></div>
+            <div class="paper-summary">Tailors restoration prompts per degradation type with depth-aware constraints.</div>
           </td>
         </tr>
         <tr>
@@ -479,14 +507,10 @@ ga('send', 'pageview');
             <img src="./paper_pic/touch_stone.jpg" width="300px" class="center">
           </td>    
           <td style="vertical-align: middle;">
-            <div class="publication-title">
-              Touchstone Benchmark: Are We on the Right Way for Evaluating AI Algorithms for Medical Segmentation?<br>
-        <br>
-            Zhaohu Xing, and etc<br>
-            </div>
-            <br>
-            <b>State: Accepted by NIPS2024</b>
-        <br>
+            <div class="paper-title"><b>Touchstone Benchmark: Are We on the Right Way for Evaluating AI Algorithms for Medical Segmentation?</b></div>
+            <div class="paper-authors">Zhaohu Xing, and etc</div>
+            <div class="paper-state"><b>State: Accepted by NIPS2024</b></div>
+            <div class="paper-summary">A large-scale benchmark to rigorously evaluate medical image segmentation algorithms.</div>
           </td>
         </tr>
         <tr>
@@ -498,14 +522,10 @@ ga('send', 'pageview');
             <img src="./paper_pic/TBGDiff.jpg" width="300px" class="center">
           </td>    
           <td style="vertical-align: middle;" >
-            <div class="publication-title">
-              Timeline and Boundary Guided Diffusion Network for Video Shadow Detection<br>
-        <br>
-            Haipeng Zhou, Hongqiu Wang, Tian Ye, <b>Zhaohu Xing</b>, Jun Ma, Ping Li, Qiong Wang, and Lei Zhu<br>
-            </div>
-            <br>
-            <b>State: Accepted by ACM MM 2024 (Oral Presentation)</b>
-        <br>
+            <div class="paper-title"><b>Timeline and Boundary Guided Diffusion Network for Video Shadow Detection</b></div>
+            <div class="paper-authors">Haipeng Zhou, Hongqiu Wang, Tian Ye, <b>Zhaohu Xing</b>, Jun Ma, Ping Li, Qiong Wang, and Lei Zhu</div>
+            <div class="paper-state"><b>State: Accepted by ACM MM 2024 (Oral Presentation)</b></div>
+            <div class="paper-summary">Detects video shadows via timeline and boundary guided diffusion reasoning.</div>
           </td>
         </tr>
         <tr>
@@ -520,14 +540,10 @@ ga('send', 'pageview');
             <img src="./paper_pic/DTPM.jpg" width="300px"  class="center">
           </td>    
           <td style="vertical-align: middle;">
-            <div class="publication-title">
-              Learning Diffusion Texture Priors for Image Restoration<br>
-        <br>
-              Tian Ye, Sixiang Chen, Wenhao Chai, <b>Zhaohu Xing</b>, Qing Qin, and Lei Zhu<br>
-            </div>
-            <br>
-            <b>State: Accepted by CVPR2024 (spotlight).</b>
-        <br>
+            <div class="paper-title"><b>Learning Diffusion Texture Priors for Image Restoration</b></div>
+            <div class="paper-authors">Tian Ye, Sixiang Chen, Wenhao Chai, <b>Zhaohu Xing</b>, Qing Qin, and Lei Zhu</div>
+            <div class="paper-state"><b>State: Accepted by CVPR2024 (spotlight).</b></div>
+            <div class="paper-summary">Learns diffusion-based texture priors to improve perceptual quality of image restoration.</div>
           </td>
         </tr>
         <tr>
@@ -539,14 +555,10 @@ ga('send', 'pageview');
             <img src="./paper_pic/long_tail.jpg" width="300px" class="center">
           </td>    
           <td style="vertical-align: middle;">
-            <div class="publication-title">
-              Anchored Supervised Contrastive Learning for Long-Tailed Medical Image Regression<br>
-        <br>
-            Zhaoying Li, <b>Zhaohu Xing</b>, Lei Zhu, and Liang Wan<br>
-            </div>
-            <br>
-            <b>State: Accepted by PRCV2024.</b>
-        <br>
+            <div class="paper-title"><b>Anchored Supervised Contrastive Learning for Long-Tailed Medical Image Regression</b></div>
+            <div class="paper-authors">Zhaoying Li, <b>Zhaohu Xing</b>, Lei Zhu, and Liang Wan</div>
+            <div class="paper-state"><b>State: Accepted by PRCV2024.</b></div>
+            <div class="paper-summary">Anchors contrastive learning to handle long-tailed distributions in medical regression.</div>
           </td>
         </tr>
         <tr>
@@ -558,14 +570,10 @@ ga('send', 'pageview');
             <img src="./paper_pic/mesa_ir.jpg" width="300px" class="center">
           </td>    
           <td style="vertical-align: middle;">
-            <div class="publication-title">
-              Standing on the Giants: Informative Messenger Prompts with Self-adapter for Image<br>
-        <br>
-            Sixiang Chen, Tian Ye, Haoyu Chen, Yijun Yang, <b>Zhaohu Xing</b>, Fugee Tsung, and Lei Zhu<br>
-            </div>
-            <br>
-            Submited to ECCV2024
-        <br>
+            <div class="paper-title"><b>Standing on the Giants: Informative Messenger Prompts with Self-adapter for Image</b></div>
+            <div class="paper-authors">Sixiang Chen, Tian Ye, Haoyu Chen, Yijun Yang, <b>Zhaohu Xing</b>, Fugee Tsung, and Lei Zhu</div>
+            <div class="paper-state">Submitted to ECCV2024</div>
+            <div class="paper-summary">Transfers knowledge from large pretrained models via informative messenger prompts.</div>
           </td>
         </tr>
         <tr>
@@ -579,14 +587,10 @@ ga('send', 'pageview');
             <img src="./paper_pic/diff-vps.jpg" width="300px" class="center">
           </td>    
           <td style="vertical-align: middle;">
-            <div class="publication-title">
-              Diff-VPS: Video Polyp Segmentation via a Multi-task Diffusion Network with Adversarial Temporal Reasoning<br>
-        <br>
-              YingLing Lu, Yijun Yang, <b>Zhaohu Xing</b>, and Lei Zhu<br>
-            </div>
-            <br>
-          <b>State: Early Accepted by MICCAI2024.</b>
-        <br>
+            <div class="paper-title"><b>Diff-VPS: Video Polyp Segmentation via a Multi-task Diffusion Network with Adversarial Temporal Reasoning</b></div>
+            <div class="paper-authors">YingLing Lu, Yijun Yang, <b>Zhaohu Xing</b>, and Lei Zhu</div>
+            <div class="paper-state"><b>State: Early Accepted by MICCAI2024.</b></div>
+            <div class="paper-summary">Segments polyps in videos via multi-task diffusion with adversarial temporal reasoning.</div>
           </td>
         </tr>
         <tr>
@@ -600,14 +604,9 @@ ga('send', 'pageview');
             <img src="./paper_pic/vivim.jpg" width="300px" class="center">
           </td>    
           <td style="vertical-align: middle;">
-            <div class="publication-title">
-              Vivim: a Video Vision Mamba for Medical Video Object Segmentation<br>
-        <br>
-              Yijun Yang, <b>Zhaohu Xing</b>, and Lei Zhu<br>
-            </div>
-            <br>
-            <b>State: Early Accepted by IEEE TSCVT.</b>
-        <br>
+            <div class="paper-title"><b>Vivim: a Video Vision Mamba for Medical Video Object Segmentation</b></div>
+            <div class="paper-authors">Yijun Yang, <b>Zhaohu Xing</b>, and Lei Zhu</div>
+            <div class="paper-state"><b>State: Early Accepted by IEEE TSCVT.</b></div>
           </td>
         </tr>
         <tr>
@@ -620,14 +619,10 @@ ga('send', 'pageview');
             <img src="./paper_pic/diffmic_v2.jpg" width="300px" class="center">
           </td>    
           <td style="vertical-align: middle;">
-            <div class="publication-title">
-              DiffMIC-v2: Medical Image Classification via Improved Diffusion Network<br>
-        <br>
-          Yijun Yang, Huazhu Fu, Angelica I. Aviles-Rivero, <b>Zhaohu Xing</b>, Lei Zhu
-            </div>
-            <br>
-              <b>State: Accepted by IEEE TMI</b>
-        <br>
+            <div class="paper-title"><b>DiffMIC-v2: Medical Image Classification via Improved Diffusion Network</b></div>
+            <div class="paper-authors">Yijun Yang, Huazhu Fu, Angelica I. Aviles-Rivero, <b>Zhaohu Xing</b>, Lei Zhu</div>
+            <div class="paper-state"><b>State: Accepted by IEEE TMI</b></div>
+            <div class="paper-summary">Improves diffusion-based medical image classification with a refined network design.</div>
           </td>
         </tr>
         <tr>
@@ -642,14 +637,11 @@ ga('send', 'pageview');
           <img src="./paper_pic/ummnet.jpg" width="300px" class="center">
         </td>    
         <td style="vertical-align: middle;">
-          <div class="publication-title">
-            Uncertainty-aware Multi-dimensional Mutual Learning for Brain and Brain Tumor Segmentation<br>
-			<br>
-            Junting Zhao, <b>Zhaohu Xing</b>, and Lei Zhu<br>
-          </div>
-          <br>
-        <b>State: Accepted by IEEE Journal of Biomedical and Health Informatics (JBHI) 2023.</b>
-		</td>
+          <div class="paper-title"><b>Uncertainty-aware Multi-dimensional Mutual Learning for Brain and Brain Tumor Segmentation</b></div>
+          <div class="paper-authors">Junting Zhao, <b>Zhaohu Xing</b>, and Lei Zhu</div>
+          <div class="paper-state"><b>State: Accepted by IEEE Journal of Biomedical and Health Informatics (JBHI) 2023.</b></div>
+          <div class="paper-summary">Jointly segments brain and tumor via uncertainty-aware multi-dimensional mutual learning.</div>
+        </td>
       </tr>
       <tr>
         <td colspan="2">&nbsp;</td>
@@ -660,15 +652,10 @@ ga('send', 'pageview');
           <img src="./paper_pic/aiib23.jpg" width="300px" class="center">
         </td>    
         <td style="vertical-align: middle;">
-          <div class="publication-title">
-            Hunting imaging biomarkers in pulmonary fibrosis: Benchmarks of the AIIB23 challenge<br>
-			<br>
-            Zhaohu Xing, Lei Zhu, and etc.<br>
-          </div>
-          <br>
-          <!-- State: Under review, <a href="paper_page/STAN/STAN.html" style="text-decoration: underline;">here is project page</a>. -->
-          <b>State: Accepted by Medical Image Analysis</b>
-			<br>
+          <div class="paper-title"><b>Hunting imaging biomarkers in pulmonary fibrosis: Benchmarks of the AIIB23 challenge</b></div>
+          <div class="paper-authors">Zhaohu Xing, Lei Zhu, and etc.</div>
+          <div class="paper-state"><b>State: Accepted by Medical Image Analysis</b></div>
+          <div class="paper-summary">Benchmarks AI algorithms for pulmonary fibrosis imaging biomarker detection.</div>
         </td>
       </tr>
 
@@ -679,19 +666,12 @@ ga('send', 'pageview');
       <tr>
         <td width="270">
           <img src="./paper_pic/segrap23.jpg" width="300px" class="center">
-        </td>    
+        </td>
         <td style="vertical-align: middle;">
-          <div class="publication-title" >
-            SegRap2023 : A Benchmark of Organs-at-Risk and Gross Tumor Volume Segmentation for Radiotherapy Planning of Nasopharyngeal Carcinoma<br>
-			    <br>
-            Zhaohu Xing, Lei Zhu, and etc.<br>
-            <br>
-            <b>State: Accepted by Medical Image Analysis</b>
-          </div>
-          <!-- <br> -->
-          <!-- State: Under review, <a href="paper_page/STAN/STAN.html" style="text-decoration: underline;">here is project page</a>. -->
-          
-			<br>
+          <div class="paper-title"><b>SegRap2023 : A Benchmark of Organs-at-Risk and Gross Tumor Volume Segmentation for Radiotherapy Planning of Nasopharyngeal Carcinoma</b></div>
+          <div class="paper-authors">Zhaohu Xing, Lei Zhu, and etc.</div>
+          <div class="paper-state"><b>State: Accepted by Medical Image Analysis</b></div>
+          <div class="paper-summary">Benchmarks organs-at-risk and tumor segmentation for nasopharyngeal carcinoma radiotherapy.</div>
         </td>
       </tr>
 
